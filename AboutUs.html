@@ -348,6 +348,11 @@
 </script>
 
 <script>
+  const indicator = document.querySelector('.indicator');
+  indicator.style.transform = `translateX(200px)`;
+</script>
+
+<script>
   document.getElementById("searchBtnn").addEventListener("click", () => {
     const input = document.getElementById("search").value.trim();
     if (input) {
