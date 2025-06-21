@@ -13,7 +13,7 @@ import dotenv from 'dotenv';
 import { cloudinaryConnect } from './config/cloudinary.js';
 dotenv.config();
 
-app.use(cors({ origin: ['http://localhost:5500'],credentials:true }));
+app.use(cors({ origin: ['http://localhost:5500','https://gleaming-sprite-1aaf07.netlify.app'],credentials:true }));
 
 
 //Middleware
