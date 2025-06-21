@@ -23,7 +23,7 @@
 
 
 const listItems = document.querySelectorAll('.navigation ul li');
-const indicator = document.querySelector('.indicator');
+
 
 // Get the current page name from URL
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -38,9 +38,7 @@ listItems.forEach((li, index) => {
     listItems.forEach(item => item.classList.remove('active')); // remove all first
     li.classList.add('active'); // set current one
 
-    const indicatorPosition = index * 70; // adjust based on menu item width
-    indicator.style.transform = `translateX(${indicatorPosition}px)`;
-  }
+   
 });
 
 // Also keep the click listener (optional for SPA navigation or visual)
@@ -49,9 +47,7 @@ listItems.forEach((li, index) => {
     listItems.forEach(item => item.classList.remove('active'));
     li.classList.add('active');
 
-    const indicatorPosition = index * 70;
-    indicator.style.transform = `translateX(${indicatorPosition}px)`;
-  });
+    
 });
 
 
