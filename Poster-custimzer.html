@@ -729,6 +729,12 @@
         // Call default once
         setLogoDefaults(selectedSize);
     </script>
+
+    <script>
+  const indicator = document.querySelector('.indicator');
+  indicator.style.transform = `translateX(140px)`;
+</script>
+
     <script>
   document.getElementById("searchBtnn").addEventListener("click", () => {
     const input = document.getElementById("search").value.trim();
