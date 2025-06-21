@@ -104,7 +104,7 @@
     <!-- <<<<<<<<<<<<------NavbarEnd->>>>>>>> -->
     <div class="navigation">
         <ul>
-            <li class="active">
+            <li class="">
                 <a href="index.html">
                     <span class="icon">
                         <i class="fa fa-home"></i>
@@ -112,7 +112,7 @@
                     <span class="text">Home</span>
                 </a>
             </li>
-            <li class="profile-dropdown">
+            <li class="active profile-dropdown">
                 <a href="auth-signup.html">
                     <span class="icon"><i class="fa fa-user"></i></span>
                     <span class="text">Sign Up</span>
@@ -338,6 +338,11 @@
 
 
 <script src="script.js"></script>
+
+    <script>
+  const indicator = document.querySelector('.indicator');
+  indicator.style.transform = `translateX(70px)`;
+</script>
 </body>
 
 </html>
