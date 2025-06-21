@@ -1,54 +1,49 @@
-  // light & dark mode swich js
-        const toggleButton = document.getElementById('modeToggle');
-        const themeLink = document.getElementById('themeStylesheet');
-        const modeIcon = document.getElementById('modeIcon');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('modeToggle');
+  const themeLink = document.getElementById('themeStylesheet');
+  const modeIcon = document.getElementById('modeIcon');
+  let isDarkMode = localStorage.getItem('theme') === 'dark';
 
-       
-        let isDarkMode = localStorage.getItem('theme') === 'dark';
-        themeLink.href = isDarkMode ? './styleeee.css' : './styleeee2.css';
-        modeIcon.textContent = isDarkMode ? '🌙' : '🌞'; 
+  themeLink.href = isDarkMode ? './styleeee.css' : './styleeee2.css';
+  modeIcon.textContent = isDarkMode ? '🌙' : '🌞';
 
-        toggleButton.addEventListener('click', () => {
-            if (isDarkMode) {
-                themeLink.href = './styleeee2.css';
-                localStorage.setItem('theme', 'light');
-                modeIcon.textContent = '🌞'; // sun for light
-            } else {
-                themeLink.href = './styleeee.css';
-                localStorage.setItem('theme', 'dark');
-                modeIcon.textContent = '🌙'; // moon for dark
-            }
-            isDarkMode = !isDarkMode;
-        });
+  toggleButton.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+    themeLink.href = isDarkMode ? './styleeee.css' : './styleeee2.css';
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    modeIcon.textContent = isDarkMode ? '🌙' : '🌞';
+  });
 
+  const listItems = document.querySelectorAll('.navigation ul li');
+  const indicator = document.querySelector('.indicator');
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-const listItems = document.querySelectorAll('.navigation ul li');
+  listItems.forEach((li, index) => {
+    const anchor = li.querySelector("a");
+    const hrefPage = anchor?.getAttribute("href");
 
+    if (hrefPage === currentPage) {
+      listItems.forEach(item => item.classList.remove('active'));
+      li.classList.add('active');
 
-// Get the current page name from URL
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+      if (indicator) {
+        const itemWidth = li.offsetWidth;
+        indicator.style.transform = `translateX(${index * itemWidth}px)`;
+      }
+    }
 
-// Set active class on load
-listItems.forEach((li, index) => {
-  const anchor = li.querySelector("a");
-  const hrefPage = anchor.getAttribute("href");
+    li.addEventListener('click', () => {
+      listItems.forEach(item => item.classList.remove('active'));
+      li.classList.add('active');
 
-  // If current page matches link href
-  if (hrefPage === currentPage) {
-    listItems.forEach(item => item.classList.remove('active')); // remove all first
-    li.classList.add('active'); // set current one
-
-   
+      if (indicator) {
+        const itemWidth = li.offsetWidth;
+        indicator.style.transform = `translateX(${index * itemWidth}px)`;
+      }
+    });
+  });
 });
 
-// Also keep the click listener (optional for SPA navigation or visual)
-listItems.forEach((li, index) => {
-  li.addEventListener('click', function () {
-    listItems.forEach(item => item.classList.remove('active'));
-    li.classList.add('active');
-
-    
-});
 
 
 
