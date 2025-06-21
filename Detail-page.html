@@ -507,7 +507,7 @@
                 const id = params.get("id");
                 if (!id) return console.log("❌ No ID in URL");
 
-                const res = await fetch(`http://localhost:11000/api/get/product/${id}`);
+                const res = await fetch(`https://poster-2-23cy.onrender.com/api/get/product/${id}`);
                 const data = await res.json();
                 console.log(data);
 
@@ -682,7 +682,7 @@
               const token = localStorage.getItem('token')
 
               if(token){
-            const res = await fetch("http://localhost:11000/getUserDetails", {
+            const res = await fetch("https://poster-2-23cy.onrender.com/getUserDetails", {
                 headers: {
                 Authorization: token,
                 Accept: "application/json",
@@ -728,7 +728,7 @@
 
             const token = localStorage.getItem('token')
 if(token){
-            const res = await fetch("http://localhost:11000/getUserDetails", {
+            const res = await fetch("https://poster-2-23cy.onrender.com/getUserDetails", {
                 headers: {
                 Authorization: token,
                 Accept: "application/json",
@@ -780,7 +780,7 @@ if(token){
                 const id = params.get("id");
                 if (!id) return console.log("❌ No ID in URL");
 
-                const res = await fetch(`http://localhost:11000/api/get/product/${id}`);
+                const res = await fetch(`https://poster-2-23cy.onrender.com/api/get/product/${id}`);
                 const data = await res.json();
                 console.log(data);
 

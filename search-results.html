@@ -115,7 +115,7 @@
       ? `Results for "${searchTag}"`
       : "No tag provided";
 
-    fetch('http://localhost:11000/api/get/product')
+    fetch('https://poster-2-23cy.onrender.com/api/get/product')
       .then(res => res.json())
       .then(data => {
         const allProducts = data.allProduct || [];

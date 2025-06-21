@@ -210,7 +210,7 @@
     document.addEventListener('DOMContentLoaded', async () => {
       try {
         // Fetch Users
-        const userRes = await fetch("http://localhost:11000/api/admin/view/users");
+        const userRes = await fetch("https://poster-2-23cy.onrender.com/api/admin/view/users");
         const userData = await userRes.json();
         const users = userData.allUsers || [];
         document.getElementById("totalUsers").innerText = users.length;
@@ -238,7 +238,7 @@
         });
 
         // Fetch Products
-        const productRes = await fetch("http://localhost:11000/api/get/product");
+        const productRes = await fetch("https://poster-2-23cy.onrender.com/api/get/product");
         const productData = await productRes.json();
         const products = productData.allProduct || [];
                 document.getElementById("totalProducts").innerText = products.length;

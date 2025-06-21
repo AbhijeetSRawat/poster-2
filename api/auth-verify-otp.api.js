@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  const verifyOtpApi = await fetch('http://localhost:11000/api/auth/verifyotp', {
+  const verifyOtpApi = await fetch('https://poster-2-23cy.onrender.com/api/auth/verifyotp', {
     method: "POST",
     headers: {
       "Accept": "application/json",

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         // Fetch product details by ID
-        const fetchProductWithId = await fetch(`http://localhost:11000/api/get/product/${productId}`, {
+        const fetchProductWithId = await fetch(`https://poster-2-23cy.onrender.com/api/get/product/${productId}`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             try {
                 // Send PUT request to update product
-                const response = await fetch(`http://localhost:11000/api/product/edit/${productId}`, {
+                const response = await fetch(`https://poster-2-23cy.onrender.com/api/product/edit/${productId}`, {
                     method: "PUT",
                     body: formData,
                 });

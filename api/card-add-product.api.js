@@ -48,7 +48,7 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('http://localhost:11000/api/get/product');
+        const response = await fetch('https://poster-2-23cy.onrender.com/api/get/product');
         if (!response.ok) throw new Error("Error fetching product");
 
         const { allProduct } = await response.json();

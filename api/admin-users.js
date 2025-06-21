@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const fetchUser = await fetch('http://localhost:11000/api/admin/view/users', {
+        const fetchUser = await fetch('https://poster-2-23cy.onrender.com/api/admin/view/users', {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             if (confirm("Are You sure you want to Delete User ?")) {
                 try {
-                    const response = await fetch(`http://localhost:11000/api/admin/delete/user/${id}`, {
+                    const response = await fetch(`https://poster-2-23cy.onrender.com/api/admin/delete/user/${id}`, {
                         method: "DELETE",
                     });
                     if (!response.ok) {

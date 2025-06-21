@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailValue = email.value.trim();
         localStorage.setItem('email',emailValue);
         try {
-            const fetchResetApi = await fetch('http://localhost:11000/api/auth/forgetpassword', {
+            const fetchResetApi = await fetch('https://poster-2-23cy.onrender.com/api/auth/forgetpassword', {
                 method: "POST",
                 headers: {
                     Accept: 'application/json',

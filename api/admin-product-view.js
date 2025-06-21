@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
     try {
-        const fetchProduct = await fetch('http://localhost:11000/api/get/product', {
+        const fetchProduct = await fetch('https://poster-2-23cy.onrender.com/api/get/product', {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log(`Id Delete ${id}`);
             if (confirm("Are You sure you want to Delete the Product ?")) {
                 try {
-                    const response = await fetch(`http://localhost:11000/api/product/delete/${id}`, {
+                    const response = await fetch(`https://poster-2-23cy.onrender.com/api/product/delete/${id}`, {
                         method: "DELETE",
                     });
                     if (!response.ok) {

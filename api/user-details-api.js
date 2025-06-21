@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const token = localStorage.getItem("token");
 
-    const user = await fetch('http://localhost:11000/getUserDetails', {
+    const user = await fetch('https://poster-2-23cy.onrender.com/getUserDetails', {
       method: "GET",
       headers: {
         Accept: "application/json",

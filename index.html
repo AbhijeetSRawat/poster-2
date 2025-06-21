@@ -695,7 +695,7 @@
     </script>
 
     <script>
-  fetch('http://localhost:11000/displayByDate')
+  fetch('https://poster-2-23cy.onrender.com/displayByDate')
     .then(response => response.json())
     .then(result => {
       const images = result.data;
@@ -734,7 +734,7 @@
     }
     else{
          try {
-      const res = await fetch("http://localhost:11000/getUserDetails", {
+      const res = await fetch("https://poster-2-23cy.onrender.com/getUserDetails", {
         headers: {
           Authorization: token,
           Accept: "application/json",
